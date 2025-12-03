@@ -69,56 +69,35 @@ public abstract class KuantumNesnesi
         }
     }
 }
-2. Interface Segregation (Arayüz Ayrımı)
-java
+```
+#### 2. **Interface Segregation (Arayüz Ayrımı)**
+```csharp
 interface IKritik {
     void AcilDurumSogutmasi();
 }
-3. Inheritance & Polymorphism (Kalıtım ve Çok Biçimlilik)
-python
+```
+#### 3. **Inheritance & Polymorphism (Kalıtım ve Çok Biçimlilik)**
+```csharp
 class AntiMadde(KuantumNesnesi, IKritik):
     def AnalizEt(self):
         self.stabilite -= 25
         print("Evrenin dokusu titriyor...")
-4. Custom Exception (Özel Hata Yönetimi)
-javascript
+```
+#### 4. **Custom Exception (Özel Hata Yönetimi)**
+```csharp
 class KuantumCokusuException extends Error {
     constructor(message) {
         super(message);
         this.name = "KuantumCokusuException";
     }
 }
-5. Generic Collections (Generic Koleksiyonlar)
-csharp
+```
+
+#### 5. **Generic Collections (Generic Koleksiyonlar)**
+```csharp
 // C#'ta Generic List kullanımı
 static List<KuantumNesnesi> envanter = new List<KuantumNesnesi>();
 
 // Java'da Generic List kullanımı
 static List<KuantumNesnesi> envanter = new ArrayList<>();
-6. Type Checking (Tip Kontrolü)
-C# - 'is' anahtar kelimesi ile kontrol
-csharp
-if (nesne is IKritik kritikNesne)
-{
-    kritikNesne.AcilDurumSogutmasi();
-}
-Java - 'instanceof' ile kontrol
-java
-if (nesne instanceof IKritik) {
-    IKritik kritikNesne = (IKritik) nesne;
-    kritikNesne.AcilDurumSogutmasi();
-}
-Python - isinstance() ile kontrol
-python
-if isinstance(nesne, IKritik):
-    nesne.AcilDurumSogutmasi()
-7. Polymorphism in Action (Çok Biçimlilik Uygulaması)
-csharp
-// Tüm nesneler için aynı metodun farklı şekillerde çalışması
-foreach (var nesne in envanter)
-{
-    // Her nesne kendi AnalizEt() metodunu çalıştırır
-    nesne.AnalizEt();
-    // Her nesne kendi DurumBilgisi() metodunu çalıştırır
-    Console.WriteLine(nesne.DurumBilgisi());
-}
+```
